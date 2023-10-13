@@ -39,4 +39,11 @@ public class TaskModel {
     private LocalDateTime createdAt;
 
     private UUID idUser;
+
+    public void setTitulo(String titulo) throws Exception{
+        if(titulo.length() > 50){
+            throw new Exception("O campo titulo deve contar até 50 caracteres");
+        }
+        this.titulo = titulo;
+    }
 }
